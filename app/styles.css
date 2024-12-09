@@ -1,0 +1,212 @@
+/* General styles */
+body {
+    background: linear-gradient(135deg, #2a3d65, #4b6f96);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(22, 22, 22, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e7e4e4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 1000px;
+    max-width: 100%;
+    /* Ensure the container is responsive on smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#wallet {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+}
+
+#wallet strong {
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+
+#wallet button {
+    background-color: goldenrod;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    border: none;
+    width: 150px;
+    color: black;
+    font-weight: bold;
+}
+
+#wallet button:hover {
+    background-color: green;
+    color: white;
+}
+
+
+/* Betting section */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#cityInput,
+#bettingOptions,
+#result,
+#claimGift {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#city {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#submitCity {
+    background-color: green;
+    width: 40%;
+    font-weight: bold;
+}
+
+#submitCity:hover {
+    background-color: lawngreen;
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Result section */
+#result {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+}
+
+#resultMessage {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Claim gift section */
+#claimGift {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+}
+
+#claimGift p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#claimGift button {
+    background-color: goldenrod;
+    color: black;
+    font-weight: bold;
+}
+
+#claimGift button:hover {
+    background-color: green;
+    color: white;
+}
+
+/* Play Again button */
+#playAgain {
+    background-color: green;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+}
+
+#playAgain:hover {
+    background-color: lawngreen;
+    color: black;
+}
+
+/* Odds display */
+#oddsRain,
+#oddsNoRain {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.bet-option button {
+    background-color: #218838;
+    /* width: 300px; */
+    font-weight: bold;
+}
+
+.bet-option button:hover {
+    background-color: lawngreen;
+    color: black;
+}
+
+/* Hide elements by default */
+#bettingOptions,
+#result,
+#claimGift {
+    display: none;
+}

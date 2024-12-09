@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Betting Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="wallet">
+            <div>
+                Wallet: $<strong id="walletAmount">100</strong>
+            </div>
+            <div>
+                <button id="topUp">Top Up ($50)</button>
+            </div>
+        </div>
+        <h1>Is it raining? Wanna bet?</h1>
+        <div id="cityInput">
+            <label for="city">Enter a city name:</label>
+            <input type="text" id="city" />
+            <button id="submitCity">Submit</button>
+        </div>
+        <!-- <div id="bettingOptions">
+                <p id="oddsRain">Odds for Rain: </p>
+                <p id="oddsNoRain">Odds for No Rain: </p>
+                <button id="betRain">Bet on Rain</button>
+                <button id="betNoRain">Bet on No Rain</button>
+            </div> -->
+        <div id="bettingOptions" class="betting-options">
+            <div class="bet-option">
+                <p id="oddsRain">Odds for Rain: </p>
+                <button id="betRain">Bet on Rain</button>
+            </div>
+            <div class="bet-option">
+                <p id="oddsNoRain">Odds for No Rain: </p>
+                <button id="betNoRain">Bet on No Rain</button>
+            </div>
+        </div>
+        <div id="result">
+            <p id="resultMessage"></p>
+            <button id="playAgain">Play Again</button>
+        </div>
+        <div id="claimGift">
+            <p>Balance is low! Claim a gift of $50.</p>
+            <button id="claimGiftButton">Claim</button>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
