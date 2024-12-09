@@ -1,8 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const { error } = require('console');
-// const exp = require('constants');
-// const path = require('path');
 
 const API_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const API_KEY = '6f1e4fbbbdc9773df141bce119a0c2fd';

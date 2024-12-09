@@ -1,6 +1,5 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
-// const path = require('path');
 
 const FILEPATH = 'C:\\Users\\n.smieja\\Documents\\VSC_academy\\A_Playwright\\4_project_Hatem\\app\\index.html';
 const CITIES = ['London', 'Wrocław', 'Dubai', 'Vancouver'];
