@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const path = require('path');
 
-const FILEPATH = path.join(__dirname, '../app/index.html');
+const FILEPATH = path.join(__dirname, './app/index.html');
 const CITIES = ['London', 'Wrocław', 'Dubai', 'Vancouver'];
 const INCORRECT_CITY = 'Abcd';
 
