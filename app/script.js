@@ -17,12 +17,12 @@ function updateWallet() {
     document.getElementById('walletAmount').textContent = Number(wallet.toFixed(3));
 }
 
-// Function to generate random odds within a range
+// Function to generate random odds within a given range
 function getRandomOdds(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2)); // Random number with 2 decimal places
 }
 
-// Function to determine odds based on weather
+// Function to determine odds based on current weather
 function calculateOdds(weatherDescription) {
     if (/rain/i.test(weatherDescription)) { // If the description contains "rain"
         isRain = true;
@@ -128,7 +128,6 @@ function handleBet(betType) {
     updateWallet();
 }
 
-
 // Claim gift logic
 document.getElementById('claimGiftButton').addEventListener('click', () => {
     wallet += 50;
@@ -190,7 +189,7 @@ document.getElementById('betNoRain').addEventListener('click', () => {
     handleBet('no-rain');
 });
 
-// Random switch of the odds (to unable to lose money when the bet is correct and vice versa)
+// Random switch of the odds (to make results more unpredictable - without it, bets on lower odds will always win)
 // Function to randomly switch odds between rain and no-rain
 function randomizeOdds() {
     betCount++;
