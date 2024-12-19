@@ -19,8 +19,8 @@ The application uses current weather conditions from the following open source A
 ## Playwright tests
 To run the tests on your local computer, follow the instructions:
 1) open terminal and run command:
-- npx http-server __folder/location/to/html/file__ -p 8080 
-\ (here: npx http-server app -p 8080)
+- npx http-server *folder/location/to/html/file* -p 8080 
+  - (here: npx http-server app -p 8080)
 2) open a second terminal and run the command: 
 - npx playwright test
 
