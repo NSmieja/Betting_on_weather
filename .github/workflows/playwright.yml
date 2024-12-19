@@ -20,6 +20,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Start static server
+      run: npx http-server app -p 8080 &
     - name: Run Playwright tests
       run: npx playwright test  # command (can specify that e.g. to selected file with tests, instead of all files)
     - uses: actions/upload-artifact@v4

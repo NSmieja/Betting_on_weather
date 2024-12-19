@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const path = require('path');
 
-const FILEPATH = path.join(__dirname, '../app/index.html');
+const BASE_URL = 'http://localhost:8080';
 const CITIES = ['London', 'Wrocław', 'Dubai', 'Vancouver'];
 const INCORRECT_CITY = 'Abcd';
 
@@ -11,7 +11,7 @@ const INCORRECT_CITY = 'Abcd';
 test.describe('', () => {
   test('SCENARIO: User is able to navigate to the main page', async ({ page }) => {
     await test.step('STEP 1: Navigate to the file URL', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
@@ -30,7 +30,7 @@ test.describe('', () => {
 
   test('SCENARIO: User is able to see the bets after entering a city name and clicking on submit button', async ({ page }) => {
     await test.step('GIVEN: User has navigated to the main page', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
@@ -50,7 +50,7 @@ test.describe('', () => {
 
   test('SCENARIO: User is able to see the bets after entering a city name and clicking enter', async ({ page }) => {
     await test.step('GIVEN: User has navigated to the main page', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
@@ -70,7 +70,7 @@ test.describe('', () => {
 
   test('SCENARIO: User is able to see the bets after entering a city name - case insensitive', async ({ page }) => {
     await test.step('GIVEN: User has navigated to the main page', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
@@ -90,7 +90,7 @@ test.describe('', () => {
 
   test('SCENARIO: User is not able to see the bets after entering incorrect city name', async ({ page }) => {
     await test.step('GIVEN: User has navigated to the main page', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
@@ -112,7 +112,7 @@ test.describe('', () => {
 
   test('SCENARIO: User is able to add $50 to the wallet by clicking on Top Up button', async ({ page }) => {
     await test.step('GIVEN: User has navigated to the main page', async () => {
-      await page.goto(FILEPATH);
+      await page.goto(`${BASE_URL}/index.html`);
       await page.waitForLoadState('load');
     });
 
