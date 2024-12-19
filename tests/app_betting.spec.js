@@ -5,10 +5,9 @@ const path = require('path');
 
 const API_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const API_KEY = '6f1e4fbbbdc9773df141bce119a0c2fd';
-const FILEPATH = path.join(__dirname, '../app/index.html');
+const BASE_URL = 'http://localhost:8080';
 const CITIES = ['London', 'Wrocław', 'Dubai', 'Vancouver', 'paris', 'los angeles', 'cairo', 'kathmandu',];
 
-console.log('➡️ FILEPATH', FILEPATH);
 
 async function accessingBets(page) {
   // Simulate entering a city and pressing Enter (this triggers the fetchWeather function)
@@ -35,7 +34,7 @@ async function extraxtingOdds(page) {
 
 
 test.beforeEach(async ({ page }) => {
-  await page.goto(FILEPATH);
+  await page.goto(`${BASE_URL}/index.html`);
 });
 
 
