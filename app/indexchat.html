@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Betting Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #bettingOptions,
+        #result,
+        #claimGift {
+            display: none;
+        }
+
+        #wallet {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px 0;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        select,
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wallet">
+        <h2>Wallet Balance: $<span id="walletAmount">100</span></h2>
+        <button id="topUp">Top Up Wallet (+$50)</button>
+    </div>
+
+    <div id="cityInput">
+        <h3>Enter a City and Choose a Market</h3>
+        <input type="text" id="city" placeholder="Enter city name">
+        <select id="marketSelect">
+            <option value="" disabled selected>Select a market</option>
+            <option value="rain">Rain</option>
+            <option value="clouds">Clouds</option>
+            <option value="fog">Fog</option>
+        </select>
+        <button id="submitCity">Check Odds</button>
+    </div>
+
+    <div id="bettingOptions">
+        <h3>Betting Odds</h3>
+        <p id="oddsYes"></p>
+        <p id="oddsNo"></p>
+        <button id="betYes">Bet on Yes</button>
+        <button id="betNo">Bet on No</button>
+    </div>
+
+    <div id="result">
+        <h3>Result</h3>
+        <p id="resultMessage"></p>
+        <button id="playAgain">Play Again</button>
+    </div>
+
+    <div id="claimGift">
+        <h3>Your wallet is running low. Claim a $50 gift to continue betting!</h3>
+        <button id="claimGiftButton">Claim Gift</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
