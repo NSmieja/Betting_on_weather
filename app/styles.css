@@ -113,6 +113,13 @@ input[type="text"] {
     font-weight: bold;
 }
 
+.market {
+    /* border: 1px solid #e7e4e4; */
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 button {
     background-color: #444;
     color: white;
