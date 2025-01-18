@@ -78,13 +78,52 @@ h1 {
 #result,
 #claimGift {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     border-radius: 10px;
-    width: 320px;
+    width: 700px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.market {
+    /* border: 1px solid #e7e4e4; */
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 97%;
+    display: table;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.market p {
+    width: 200px;
+}
+
+.bet-option {
+    display: table-cell;
+}
+
+.bet-option button {
+    background-color: #218838;
+    width: 200px;
+    font-weight: bold;
+}
+
+.bet-option button:hover {
+    background-color: lawngreen;
+    color: black;
+}
+
+/* Hide elements by default */
+#bettingOptions,
+#result,
+#claimGift {
+    display: none;
 }
 
 #city {
@@ -113,12 +152,6 @@ input[type="text"] {
     font-weight: bold;
 }
 
-.market {
-    /* border: 1px solid #e7e4e4; */
-    border: 1px solid goldenrod;
-    border-radius: 5px;
-    padding: 5px;
-}
 
 button {
     background-color: #444;
@@ -198,22 +231,4 @@ button:hover {
 #oddsNoRain {
     font-size: 18px;
     margin: 10px 0;
-}
-
-.bet-option button {
-    background-color: #218838;
-    /* width: 300px; */
-    font-weight: bold;
-}
-
-.bet-option button:hover {
-    background-color: lawngreen;
-    color: black;
-}
-
-/* Hide elements by default */
-#bettingOptions,
-#result,
-#claimGift {
-    display: none;
 }
