@@ -18,7 +18,7 @@
                 <button id="topUp">Top Up ($50)</button>
             </div>
         </div>
-        <h1>Is it raining? Wanna bet?</h1>
+        <h1>Checking the weather? Wanna bet?</h1>
         <div id="cityInput">
             <label for="city">Enter a city name:</label>
             <input type="text" id="city" />
@@ -31,14 +31,40 @@
                 <button id="betNoRain">Bet on No Rain</button>
             </div> -->
         <div id="bettingOptions" class="betting-options">
-            <div class="bet-option">
-                <p id="oddsRain">Odds for Rain: </p>
-                <button id="betRain">Bet on Rain</button>
+            <div class="market">
+                <p>Market: Rain</p>
+                <div class="bet-option">
+                    <p id="oddsRain">Odds for Rain: </p>
+                    <button id="betRain">Bet on Rain</button>
+                </div>
+                <div class="bet-option">
+                    <p id="oddsNoRain">Odds for No Rain: </p>
+                    <button id="betNoRain">Bet on No Rain</button>
+                </div>
             </div>
-            <div class="bet-option">
-                <p id="oddsNoRain">Odds for No Rain: </p>
-                <button id="betNoRain">Bet on No Rain</button>
+            <div class="market">
+                <p>Market: Clouds</p>
+                <div class="bet-option">
+                    <p id="oddsClouds">Odds for Clouds: </p>
+                    <button id="betClouds">Bet on Clouds</button>
+                </div>
+                <div class="bet-option">
+                    <p id="oddsNoClouds">Odds for No Clouds: </p>
+                    <button id="betNoClouds">Bet on No Clouds</button>
+                </div>
             </div>
+            <div class="market">
+                <p>Market: Fog</p>
+                <div class="bet-option">
+                    <p id="oddsFog">Odds for Fog: </p>
+                    <button id="betFog">Bet on Fog</button>
+                </div>
+                <div class="bet-option">
+                    <p id="oddsNoFog">Odds for No Fog: </p>
+                    <button id="betNoFog">Bet on No Fog</button>
+                </div>
+            </div>
+
         </div>
         <div id="result">
             <p id="resultMessage"></p>
