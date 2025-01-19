@@ -1,9 +1,5 @@
 let wallet = 100;
 let citiesUsed = [];
-let rainOdds;
-let noRainOdds;
-let isRain;
-let winOdds;
 let giftClaimed = false;
 let freezeAmount = 90;
 let cashedOutAmount = 50;
@@ -12,6 +8,10 @@ let cashedValue = 0.4;
 let freezeOddsLevel = cashedOutOddsLevel;
 let betCount = 0; // Counter to track number of bets made
 
+let rainOdds;
+let noRainOdds;
+let isRain;
+
 let cloudsOdds;
 let noCloudsOdds;
 let isCloudy;
@@ -19,6 +19,11 @@ let isCloudy;
 let fogOdds;
 let noFogOdds;
 let isFoggy;
+
+let winOdds;
+let winOddsRain;
+let winOddsClouds;
+let winOddsFog;
 
 // Function to update wallet display
 function updateWallet() {
@@ -36,34 +41,37 @@ function calculateOdds(weatherDescription) {
         isRain = true;
         rainOdds = getRandomOdds(1.2, 1.8); // Lower odds for "Rain"
         noRainOdds = getRandomOdds(2.0, 3.0); // Higher odds for "No Rain"
-        winOdds = rainOdds;
+        winOddsRain = rainOdds;
     } else { // If it doesn't contain "rain"
         isRain = false;
         rainOdds = getRandomOdds(2.0, 3.0); // Higher odds for "Rain"
         noRainOdds = getRandomOdds(1.2, 1.8); // Lower odds for "No Rain"
-        winOdds = noRainOdds;
+        winOddsRain = noRainOdds;
     }
 
     if (/cloud/i.test(weatherDescription)) { // Cloud odds
         isCloudy = true;
         cloudsOdds = getRandomOdds(1.5, 2.0);
         noCloudsOdds = getRandomOdds(2.0, 2.5);
+        winOddsClouds = cloudsOdds;
     } else { // No cloud odds
         isCloudy = false;
         cloudsOdds = getRandomOdds(2.0, 2.5);
         noCloudsOdds = getRandomOdds(1.5, 2.0);
+        winOddsClouds = noCloudsOdds;
     }
 
     if (/fog/i.test(weatherDescription)) { // Fog odds
         isFoggy = true;
         fogOdds = getRandomOdds(1.5, 2.0);
         noFogOdds = getRandomOdds(2.0, 2.5);
+        winOddsFog = fogOdds;
     } else { // No fog odds
         isFoggy = false;
         fogOdds = getRandomOdds(2.0, 2.5);
         noFogOdds = getRandomOdds(1.5, 2.0);
+        winOddsFog = noFogOdds;
     }
-
 
     // Update the odds display
     document.getElementById('oddsRain').textContent = `Odds for Rain: ${rainOdds}`;
@@ -117,6 +125,14 @@ function handleBet(betType) {
 
     let resultMessage;
     let profit;
+
+    if (betType === 'rain' || betType === 'no-rain') {
+        winOdds = winOddsRain
+    } else if (betType === 'clouds' || betType === 'no-clouds') {
+        winOdds = winOddsClouds
+    } else if (betType === 'fog' || betType === 'no-fog') {
+        winOdds = winOddsFog
+    }
 
     console.log("☑️ Wallet before bet:", wallet, typeof wallet);
 
@@ -224,23 +240,18 @@ document.getElementById('playAgain').addEventListener('click', () => {
 document.getElementById('betRain').addEventListener('click', () => {
     handleBet('rain');
 });
-
 document.getElementById('betNoRain').addEventListener('click', () => {
     handleBet('no-rain');
 });
-
 document.getElementById('betClouds').addEventListener('click', () => {
     handleBet('clouds');
 });
-
 document.getElementById('betNoClouds').addEventListener('click', () => {
     handleBet('no-clouds');
 });
-
 document.getElementById('betFog').addEventListener('click', () => {
     handleBet('fog');
 });
-
 document.getElementById('betNoFog').addEventListener('click', () => {
     handleBet('no-fog');
 });
