@@ -112,17 +112,17 @@ test.describe('', () => {
       // Checking the odds for fog
       if (/fog/i.test(weatherDescription)) {
         expect(fogOdds).toBeLessThan(noFogOdds);
-        expect(fogOdds).toBeLessThanOrEqual(2.0);
-        expect(fogOdds).toBeGreaterThanOrEqual(1.5);
-        expect(noFogOdds).toBeGreaterThanOrEqual(2.0);
-        expect(noFogOdds).toBeLessThanOrEqual(2.5);
+        expect(fogOdds).toBeLessThanOrEqual(1.3);
+        expect(fogOdds).toBeGreaterThanOrEqual(1.1);
+        expect(noFogOdds).toBeGreaterThanOrEqual(3.0);
+        expect(noFogOdds).toBeLessThanOrEqual(4.5);
       }
       else {
         expect(noFogOdds).toBeLessThan(fogOdds);
-        expect(noFogOdds).toBeLessThanOrEqual(2.0);
-        expect(noFogOdds).toBeGreaterThanOrEqual(1.5);
-        expect(fogOdds).toBeGreaterThanOrEqual(2.0);
-        expect(fogOdds).toBeLessThanOrEqual(2.5);
+        expect(noFogOdds).toBeLessThanOrEqual(1.3);
+        expect(noFogOdds).toBeGreaterThanOrEqual(1.1);
+        expect(fogOdds).toBeGreaterThanOrEqual(3.0);
+        expect(fogOdds).toBeLessThanOrEqual(4.5);
       }
 
       // Refreshing the page
