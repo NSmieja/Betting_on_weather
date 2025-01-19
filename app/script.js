@@ -63,13 +63,13 @@ function calculateOdds(weatherDescription) {
 
     if (/fog/i.test(weatherDescription)) { // Fog odds
         isFoggy = true;
-        fogOdds = getRandomOdds(1.5, 2.0);
-        noFogOdds = getRandomOdds(2.0, 2.5);
+        fogOdds = getRandomOdds(1.1, 1.3);
+        noFogOdds = getRandomOdds(3.0, 4.5);
         winOddsFog = fogOdds;
     } else { // No fog odds
         isFoggy = false;
-        fogOdds = getRandomOdds(2.0, 2.5);
-        noFogOdds = getRandomOdds(1.5, 2.0);
+        fogOdds = getRandomOdds(3.0, 4.5);
+        noFogOdds = getRandomOdds(1.1, 1.3);
         winOddsFog = noFogOdds;
     }
 
